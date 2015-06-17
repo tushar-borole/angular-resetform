@@ -1,4 +1,4 @@
-angular.module('angular-resetform').directive('resetForm', function ($parse, $compile) {
+angular.module('angular-resetform',[]).directive('resetForm', function ($parse, $compile) {
     return {
         require: ['^form', 'ngModel'],
         link: function (scope, elm, attr, formCtrl) {
