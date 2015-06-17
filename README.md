@@ -39,6 +39,7 @@ Getting Started
 |reset-form      | `""` | It initialize the directive, Only those input will be affected, who has reset-form in html attribute |
 | reset-form-clear     | `""`        |   It clear the input values, if take to pristine state,in absense of it, it will change to its initial value |
 | reset-form-value | `"cool"`or {{scopename}}        |    on reset button click the value of input will change to 'cool' |
+| formname.$resetFormData() | `""`      |    function to reset the form |
 
 
 
