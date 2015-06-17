@@ -3,13 +3,17 @@ angular.module('angular-resetform').directive('resetForm', function ($parse, $co
         require: ['^form', 'ngModel'],
         link: function (scope, elm, attr, formCtrl) {
 
+            var resetFormValue = angular.isDefined(attr.resetFormValue);
+            var resetFormClear = angular.isDefined(attr.resetFormClear);
+
 
             formCtrl[0].$resetFormData = function () {
-                if (angular.isDefined(attr.resetFormValue)) { // to set value on form rest
-                    $parse(attr.ngModel).assign(scope, formCtrl[1].initialValue);
-                } else {
+                if (resetFormValue) { // to set value on form rest
                     $parse(attr.ngModel).assign(scope, attr.resetFormValue);
 
+                } else {
+
+                    $parse(attr.ngModel).assign(scope, formCtrl[1].initialValue);
                 }
 
 
@@ -25,7 +29,7 @@ angular.module('angular-resetform').directive('resetForm', function ($parse, $co
                     formCtrl[1].initialValue = value;
 
 
-                    if (angular.isDefined(attr.resetFormClear)) { // clear value on reset
+                    if (resetFormClear) { // clear value on reset
                         formCtrl[1].initialValue = '';
                     }
 
