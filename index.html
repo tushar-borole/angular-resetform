@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en-us" ng-app="Demo">
+
+<head>
     <meta charset="UTF-8">
     <title>Angular-resetform by tushariscoolster</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,149 +9,202 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
+</head>
+
+<body ng-controller="DemoCtrl">
     <section class="page-header">
-      <h1 class="project-name">Angular-resetform</h1>
-      <h2 class="project-tagline">reset forms in angular js becomes so easy, woooooo :)</h2>
-      <a href="https://github.com/tushariscoolster/angular-resetform" class="btn">View on GitHub</a>
-      <a href="https://github.com/tushariscoolster/angular-resetform/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/tushariscoolster/angular-resetform/tarball/master" class="btn">Download .tar.gz</a>
+        <h1 class="project-name">Angular-resetform</h1>
+        <h2 class="project-tagline">reset forms in angular js becomes so easy, woooooo :)</h2>
+        <a href="https://github.com/tushariscoolster/angular-resetform" class="btn">View on GitHub</a>
+        <a href="https://github.com/tushariscoolster/angular-resetform/zipball/master" class="btn">Download .zip</a>
+        <a href="https://github.com/tushariscoolster/angular-resetform/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <h1>
+        <h1>
 <a id="angular-resetform" class="anchor" href="#angular-resetform" aria-hidden="true"><span class="octicon octicon-link"></span></a>angular-resetform</h1>
 
-<p>This directive help a user to reset the form data with no lines of javascript code. check out the documentation for the further details</p>
+        <p>This directive help a user to reset the form data with no lines of javascript code. check out the documentation for the further details</p>
 
-<hr>
+        <hr>
 
-<h2>
+        <h2>
 <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
-<p>.</p>
 
-<h4>
+
+        <h4>
 <a id="bower-install" class="anchor" href="#bower-install" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>bower install</strong>
 </h4>
 
-<pre><code>bower install angular-resetform
+        <pre><code>bower install angular-resetform
 </code></pre>
 
-<h4>
+        <h4>
 <a id="npm-install" class="anchor" href="#npm-install" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>npm install</strong>
 </h4>
 
-<pre><code>npm install angular-resetform
+        <pre><code>npm install angular-resetform
 </code></pre>
 
-<h4>
+        <h4>
 <a id="add-dependency-in-you-module" class="anchor" href="#add-dependency-in-you-module" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>add dependency in you module</strong>
 </h4>
 
-<pre><code>var app=angular.module("you app name",['angular-resetform'])
+        <pre><code>var app=angular.module("you app name",['angular-resetform'])
 </code></pre>
 
-<h4>
+        <h4>
 <a id="using-directive" class="anchor" href="#using-directive" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Using directive</strong>
 </h4>
 
-<pre><code>&lt;form name="formname"&gt;
-&lt;input class="my-scroll-area" reset-form reset-form-value="hey" reset-form-clear/&gt;
+        <pre><code>&lt;form name="formname"&gt;
+&lt;input class="my-scroll-area" reset-form /&gt;
+&lt;input class="my-scroll-area" reset-form  reset-form-clear/&gt;
+&lt;input class="my-scroll-area" reset-form reset-form-value="hey"/&gt;
 &lt;button type="submit" ng-click="formname.$resetFormData()"
 &lt;/form&gt;
 </code></pre>
 
-<h3>
+        <h3>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th align="left"></th>
+                    <th align="center"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">reset-form</td>
+                    <td align="center">
+                        <form name="formName1">
+                            <input type="text" reset-form  ng-model="clearInputReset" />
+                            <button type="submit" ng-click="formName1.$resetFormData()">Reset</button>
+                        </form>
+                        <span>Try changing input value and reset</span>
+                        
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="left">reset-form-clear</td>
+                    <td align="center">
+                        <form name="formName2">
+                            <input type="text" reset-form reset-form-clear ng-model="clearInputClear" />
+                            <button type="submit" ng-click="formName2.$resetFormData()">Reset</button>
+                        </form>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="left">reset-form-value</td>
+                    <td align="center">
+                          <form name="formName3">
+                            <input type="text" reset-form reset-form-value="cool"  ng-model="clearInputValue" />
+                            <button type="submit" ng-click="formName3.$resetFormData()">Reset</button>
+                        </form>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <h3>
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h3>
 
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="center">Option</th>
-<th align="right">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">reset-form</td>
-<td align="center"><code>""</code></td>
-<td align="right">It initialize the directive, Only those input will be affected, who has reset-form in html attribute</td>
-</tr>
-<tr>
-<td align="left">reset-form-clear</td>
-<td align="center"><code>""</code></td>
-<td align="right">It clear the input values, if take to pristine state,in absense of it, it will change to its initial value</td>
-</tr>
-<tr>
-<td align="left">reset-form-value</td>
-<td align="center">
-<code>"cool"</code>or {{scopename}}</td>
-<td align="right">on reset button click the value of input will change to 'cool'</td>
-</tr>
-</tbody>
-</table>
+        <table>
+            <thead>
+                <tr>
+                    <th align="left"></th>
+                    <th align="center">Option</th>
+                    <th align="right">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">reset-form</td>
+                    <td align="center"><code>""</code>
+                    </td>
+                    <td align="right">It initialize the directive, Only those input will be affected, who has reset-form in html attribute</td>
+                </tr>
+                <tr>
+                    <td align="left">reset-form-clear</td>
+                    <td align="center"><code>""</code>
+                    </td>
+                    <td align="right">It clear the input values, if take to pristine state,in absense of it, it will change to its initial value</td>
+                </tr>
+                <tr>
+                    <td align="left">reset-form-value</td>
+                    <td align="center">
+                        <code>"cool"</code>or {{scopename}}</td>
+                    <td align="right">on reset button click the value of input will change to 'cool'</td>
+                </tr>
+            </tbody>
+        </table>
 
-<hr>
+        <hr>
 
-<h2>
+        <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
-<p>Open an issue first to discuss potential changes/additions. If you have questions with the guide, feel free to leave them as issues in the repository. If you find a typo, create a pull request. The idea is to keep the content up to date and use github’s native feature to help tell the story with issues and PR’s, which are all searchable via google. Why? Because odds are if you have a question, someone else does too! You can learn more here at about how to contribute.</p>
+        <p>Open an issue first to discuss potential changes/additions. If you have questions with the guide, feel free to leave them as issues in the repository. If you find a typo, create a pull request. The idea is to keep the content up to date and use github’s native feature to help tell the story with issues and PR’s, which are all searchable via google. Why? Because odds are if you have a question, someone else does too! You can learn more here at about how to contribute.</p>
 
-<p><em>By contributing to this repository you are agreeing to make your content available subject to the license of this repository.</em></p>
+        <p><em>By contributing to this repository you are agreeing to make your content available subject to the license of this repository.</em>
+        </p>
 
-<h3>
+        <h3>
 <a id="process" class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h3>
 
-<pre><code>1. Discuss the changes in a GitHub issue.
+        <pre><code>1. Discuss the changes in a GitHub issue.
 2. Open a Pull Request, reference the issue, and explain the change and why it adds value.
 3. The Pull Request will be evaluated and either merged or declined.
 </code></pre>
 
-<h2>
+        <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Use this guide. Attributions are appreciated._</p>
+        <p>Use this guide. Attributions are appreciated._</p>
 
-<h3>
+        <h3>
 <a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright</h3>
 
-<p>Copyright (c) 2014-2015 <a href="http://www.tusharborole.com">Tushar Borole</a></p>
+        <p>Copyright (c) 2014-2015 <a href="http://www.tusharborole.com">Tushar Borole</a>
+        </p>
 
-<h3>
+        <h3>
 <a id="the-mit-license" class="anchor" href="#the-mit-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>(The MIT License)</h3>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:</p>
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
-<p>The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.</p>
+        <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
-<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        <p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/tushariscoolster/angular-resetform">Angular-resetform</a> is maintained by <a href="https://github.com/tushariscoolster">tushariscoolster</a>.</span>
+        <footer class="site-footer">
+            <span class="site-footer-owner"><a href="https://github.com/tushariscoolster/angular-resetform">Angular-resetform</a> is maintained by <a href="https://github.com/tushariscoolster">tushariscoolster</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+            <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        </footer>
 
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="https://rawgit.com/tushariscoolster/angular-resetform/master/angular-resetform.js"></script>
+    <script>
+    angular.module("Demo",['angular-resetform']).controller('DemoCtrl',function($scope){
+    $scope.clearInputReset="Initialvalue"
+    $scope.clearInputClear="Initialvalue"
+    $scope.clearInputValue="Initialvalue"
+    
+    })
+    
+    </script>
 
-  
-  </body>
+</body>
+
 </html>
-
