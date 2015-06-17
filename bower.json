@@ -1,0 +1,23 @@
+{
+  "name": "angular-resetform",
+  "description": "Angular Resetform Directive",
+  "version": "0.0.0",
+  "authors": [
+    "Tushar Borole <tushariscoolster@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tushariscoolster/angular-resetform"
+  },
+  "homepage": "http://tushariscoolster.github.io/angular-resetform/",
+  "license": "LGPL-2.1",
+  "main": "angular-resetform.js",
+  "keywords": ["resetform",
+               "angular"
+  ],
+  "ignore": [
+    "gh-pages",
+    "node_modules",
+    "bower_components"
+  ]
+}
