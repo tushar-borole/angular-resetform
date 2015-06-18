@@ -1,4 +1,4 @@
-angular.module('angular-resetform',[]).directive('resetForm', function ($parse, $compile) {
+angular.module('angular-resetform', []).directive('resetForm', function ($parse, $compile) {
     return {
         require: ['^form', 'ngModel'],
         link: function (scope, elm, attr, formCtrl) {
@@ -17,6 +17,12 @@ angular.module('angular-resetform',[]).directive('resetForm', function ($parse, 
                 }
 
 
+
+            };
+
+            formCtrl[0].$resetFormComplete = function () {//reset complete form
+
+                formCtrl[0].$setPristine();
 
             };
             scope.$watch(attr.ngModel, function (value) {

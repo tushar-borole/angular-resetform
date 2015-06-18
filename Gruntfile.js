@@ -29,7 +29,7 @@ module.exports = function (grunt)
                 commitMessage: 'Release v%VERSION%',
                 commitFiles: [
                     'bower.json',
-                    'angular-nicescroll.js',
+                    'angular-resetform.js',
                     'package.json'
                 ],
                 createTag: true,
